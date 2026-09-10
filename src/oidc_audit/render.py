@@ -92,7 +92,7 @@ def render_sarif(report: Report) -> str:
                     "driver": {
                         "name": "oidc-audit",
                         "informationUri": "https://github.com/thisbejim/oidc-audit",
-                        "version": "0.1.0",
+                        "version": "0.1.1",
                         "rules": rules,
                     }
                 },
