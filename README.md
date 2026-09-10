@@ -29,10 +29,10 @@ beside an application and make the audit part of CI.
 
 ## Install
 
-With `pipx`:
+With `pipx` directly from the tagged GitHub release:
 
 ```bash
-pipx install oidc-audit
+pipx install git+https://github.com/thisbejim/oidc-audit.git@v0.1.0
 ```
 
 From a checkout:
