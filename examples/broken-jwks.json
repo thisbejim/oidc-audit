@@ -1,0 +1,19 @@
+{
+  "keys": [
+    {
+      "kty": "RSA",
+      "kid": "same",
+      "alg": "ES256",
+      "n": "not+base64url",
+      "e": "AQAB",
+      "d": "private-material"
+    },
+    {
+      "kty": "RSA",
+      "kid": "same",
+      "alg": "ES256",
+      "n": "sXch",
+      "e": "AQAB"
+    }
+  ]
+}

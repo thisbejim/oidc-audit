@@ -1,0 +1,59 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "oidc-audit"
+version = "0.1.0"
+description = "Offline OIDC Discovery, JWKS, and JWT-header diagnostics"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "James Childs-Maidment", email = "10917363+thisbejim@users.noreply.github.com" }]
+keywords = ["oidc", "openid-connect", "oauth", "jwks", "jwt", "security", "lint"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Security",
+  "Topic :: Software Development :: Testing",
+]
+dependencies = []
+
+[project.scripts]
+oidc-audit = "oidc_audit.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/thisbejim/oidc-audit"
+Repository = "https://github.com/thisbejim/oidc-audit"
+Issues = "https://github.com/thisbejim/oidc-audit/issues"
+
+[dependency-groups]
+dev = [
+  "mypy>=1.13",
+  "pytest>=8.3",
+  "ruff>=0.8",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/oidc_audit"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 140
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+files = ["src"]

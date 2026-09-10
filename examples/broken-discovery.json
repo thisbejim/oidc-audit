@@ -1,0 +1,8 @@
+{
+  "issuer": "http://id.example.test/?tenant=wrong",
+  "authorization_endpoint": "https://id.example.test/oauth2/authorize",
+  "jwks_uri": "http://id.example.test/jwks.json",
+  "response_types_supported": ["code"],
+  "subject_types_supported": ["public"],
+  "id_token_signing_alg_values_supported": ["HS256"]
+}
